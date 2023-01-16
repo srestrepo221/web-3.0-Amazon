@@ -5,5 +5,19 @@ const tokens = (n) => {
 }
 
 describe("Dappazon", () => {
+  let dappazon
 
+  beforeEach(async () => {
+    // Deploy contracts
+    const Dappazon = await ethers.getContractFactory('Dappazon')
+    dappazon = await Dappazon.deploy()
+  })
+
+  describe("Deployment", () => {
+    it('has a name', async () => {
+    const name = await dappazon.name()
+    expect(name).to.equal('Dappazon')
+    //expect(await dappazon.name()).to.equal('Dappazon')
+    }) 
+  })
 })
