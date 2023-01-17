@@ -38,8 +38,6 @@ async function main() {
 
     console.log(`Listed item ${items[i].id}: ${items[i].name}`)
   }
-
-
 }
 
 // We recommend this pattern to be able to use async/await everywhere
