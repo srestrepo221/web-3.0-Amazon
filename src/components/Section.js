@@ -16,11 +16,10 @@ const Section = ({ title, items, togglePop }) => {
                         <div className='card__image'>
                             <img src={item.image} alt="Item" />
                         </div>
-                        <div className='card_info'>
+                        <div className='card__info'>
                             <h4>{item.name}</h4>
                             <Rating value={item.rating} />
-                            <p>{ethers.utils.formatUnits(item.cost.toString(),
-                            'ether')} ETH</p>
+                            <p>{ethers.utils.formatUnits(item.cost.toString(), 'ether')} ETH</p>
                         </div>
                     </div>
                 ))}
@@ -30,4 +29,3 @@ const Section = ({ title, items, togglePop }) => {
 }
 
 export default Section;
-   
