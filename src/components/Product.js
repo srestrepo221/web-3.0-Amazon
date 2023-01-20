@@ -34,7 +34,7 @@ const Product = ({ item, provider, account, dappazon, togglePop }) => {
 
   useEffect(() => {
     fetchDetails()
-  })
+  }, [hasBought])
 
   return (
     <div className="product">
